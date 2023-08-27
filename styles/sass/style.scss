@@ -1,0 +1,106 @@
+@forward "./util/reset";
+@use "./variables" as var;
+
+body {
+    font-family: var.$font-family;
+    font-weight: map-get(var.$font-weight, "medium");
+    font-size: var.$font-size;
+    background: url("../../images/pattern-background-mobile.svg"),
+        var.$pale-blue;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @media (min-width: 450px) {
+        background: url("../../images/pattern-background-desktop.svg"),
+            var.$pale-blue;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    display: grid;
+    place-content: center;
+}
+
+.card {
+    max-width: 440px;
+    background-color: var.$very-pale-blue;
+    color: var.$dark-blue;
+    box-shadow: 0 15px 25px 0 rgba(var.$bright-blue, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 1.5rem;
+
+    &__main {
+        transition: padding 0.5s ease-in-out;
+        padding: 2rem;
+        display: flex;
+        flex-flow: column nowrap;
+        text-align: center;
+        gap: 1.5rem;
+        @media (min-width: 450px) {
+            padding: 3rem;
+        }
+    }
+    &__title {
+        font-size: 1.5rem;
+        font-weight: map-get(var.$font-weight, "black");
+    }
+    &__description {
+        color: var.$desaturated-blue;
+        padding: 10px;
+    }
+    &__price {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(var.$pale-blue, 0.5);
+        padding: 1rem;
+        border-radius: 12px;
+        font-size: 14px;
+        &--price {
+            margin-right: auto;
+            color: var.$desaturated-blue;
+            word-break: normal;
+            text-align: left;
+            & strong {
+                font-weight: map-get(var.$font-weight, "black");
+                color: var.$dark-blue;
+            }
+        }
+        & img {
+            border-radius: 50%;
+        }
+        &--changePlan {
+            font-weight: map-get(var.$font-weight, "bold");
+            color: var.$bright-blue;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+                filter: opacity(0.65);
+            }
+        }
+    }
+    &__button {
+        all: unset;
+        font-weight: map-get(var.$font-weight, "black");
+        border-radius: 12px;
+        padding: 1rem;
+
+        &--proceed {
+            @extend .card__button;
+            box-shadow: 0 15px 20px 0 rgba(var.$bright-blue, 0.25);
+            background-color: var.$bright-blue;
+            color: var.$very-pale-blue;
+            &:hover {
+                filter: opacity(0.8);
+            }
+        }
+        &--cancel {
+            @extend .card__button;
+            align-self: center;
+            &:hover {
+                filter: opacity(0.8);
+            }
+        }
+    }
+}

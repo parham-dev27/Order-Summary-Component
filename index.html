@@ -1,37 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Frontend Mentor | Order summary card" />
+        <meta name="author" content="parham-dev27" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png" />
+        <title>Frontend Mentor | Order summary card</title>
+        <style>
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+            }
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+        </style>
+        <link rel="stylesheet" href="styles/css/style.css" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+            rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <section class="card">
+                <div class="card__header">
+                    <img
+                        src="images/illustration-hero.svg"
+                        alt="illustration-hero.svg"
+                        width="450px"
+                        height="220px" />
+                </div>
+                <div class="card__main">
+                    <h1 class="card__title">Order Summary</h1>
+                    <p class="card__description">
+                        You can now listen to millions of songs, audiobooks, and
+                        podcasts on any device anywhere you like!
+                    </p>
+                    <div class="card__price">
+                        <img
+                            src="images/icon-music.svg"
+                            alt="icon-music.svg"
+                            width="48px"
+                            height="48px" />
+                        <p class="card__price--price">
+                            <strong>Annual Plan</strong>
+                            <br />
+                            $59.99<wbr />/year
+                        </p>
+                        <p class="card__price--changePlan">
+                            <a href="#">Change</a>
+                        </p>
+                    </div>
+                    <button class="card__button--proceed" type="submit">
+                        Proceed to Payment
+                    </button>
+                    <button class="card__button--cancel">Cancel Order</button>
+                </div>
+            </section>
+        </main>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Order Summary
-
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <footer class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="#">Your Name Here</a>.
+        </footer>
+    </body>
 </html>

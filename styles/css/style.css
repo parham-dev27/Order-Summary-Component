@@ -1,0 +1,127 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  background: url("../../images/pattern-background-mobile.svg"), hsl(225, 100%, 94%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: grid;
+  place-content: center;
+}
+@media (min-width: 450px) {
+  body {
+    background: url("../../images/pattern-background-desktop.svg"), hsl(225, 100%, 94%);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.card {
+  max-width: 440px;
+  background-color: hsl(225, 100%, 98%);
+  color: hsl(223, 47%, 23%);
+  box-shadow: 0 15px 25px 0 rgba(56, 41, 224, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 1.5rem;
+}
+.card__main {
+  transition: padding 0.5s ease-in-out;
+  padding: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  gap: 1.5rem;
+}
+@media (min-width: 450px) {
+  .card__main {
+    padding: 3rem;
+  }
+}
+.card__title {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.card__description {
+  color: hsl(224, 23%, 55%);
+  padding: 10px;
+}
+.card__price {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(224, 232, 255, 0.5);
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 14px;
+}
+.card__price--price {
+  margin-right: auto;
+  color: hsl(224, 23%, 55%);
+  word-break: normal;
+  text-align: left;
+}
+.card__price--price strong {
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+}
+.card__price img {
+  border-radius: 50%;
+}
+.card__price--changePlan {
+  font-weight: 700;
+  color: hsl(245, 75%, 52%);
+  text-decoration: underline;
+}
+.card__price--changePlan:hover {
+  text-decoration: none;
+  filter: opacity(0.65);
+}
+.card__button, .card__button--cancel, .card__button--proceed {
+  all: unset;
+  font-weight: 900;
+  border-radius: 12px;
+  padding: 1rem;
+}
+.card__button--proceed {
+  box-shadow: 0 15px 20px 0 rgba(56, 41, 224, 0.25);
+  background-color: hsl(245, 75%, 52%);
+  color: hsl(225, 100%, 98%);
+}
+.card__button--proceed:hover {
+  filter: opacity(0.8);
+}
+.card__button--cancel {
+  align-self: center;
+}
+.card__button--cancel:hover {
+  filter: opacity(0.8);
+}
+
+/*# sourceMappingURL=style.css.map */
